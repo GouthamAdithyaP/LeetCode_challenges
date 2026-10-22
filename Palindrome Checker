@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        boolean ispal =true;
+        String str=Integer.toString(x);
+        for(int i=0,j=str.length()-1 ;i<str.length();i++,j--){
+         if(str.charAt(i)!=str.charAt(j))
+         {
+             return ispal=false;
+         }
+        }
+        return true;
+    }
+    public static void main(String args[]){
+        Solution s =new Solution();
+        boolean value=s.isPalindrome(120);
+        System.out.println(value);
+    }
+}
