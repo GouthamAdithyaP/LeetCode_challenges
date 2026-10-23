@@ -1,0 +1,25 @@
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int lastval = 0;
+        int a[] = nums;
+        Arrays.sort(a);
+        int expected = 1;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] < expected) {
+                continue;
+            } else if (a[i] == expected) {
+                expected++;
+            } else {
+                System.out.print(expected);
+                break;
+            }
+
+        }
+        return expected;
+    }
+    public static void main(String args[]){
+       Solution s =new Solution();
+       int a[] ={1,2,0};
+       s.firstMissingPositive(a);
+    }
+    }
